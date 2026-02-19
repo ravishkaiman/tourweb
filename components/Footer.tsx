@@ -46,16 +46,7 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    <div className="footer-col">
-                        <h3>SRI LANKA TOURS</h3>
-                        <ul>
-                            <li><Link href="#classic">Classic Sri Lanka</Link></li>
-                            <li><Link href="#nature">Nature Trails</Link></li>
-                            <li><Link href="#cultural">Cultural Heritage</Link></li>
-                            <li><Link href="#beach">Beach Stays</Link></li>
-                            <li><Link href="#honeymoon">Honeymoon Tours</Link></li>
-                        </ul>
-                    </div>
+
 
                     <div className="footer-col">
                         <h3>ONE DAY TOURS</h3>
