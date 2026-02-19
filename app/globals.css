@@ -571,6 +571,7 @@ body:has(.hero-section) .main-header {
 }
 
 /* Responsive */
+/* Responsive */
 @media (max-width: 768px) {
     .top-bar-container {
         flex-direction: column;
@@ -583,27 +584,119 @@ body:has(.hero-section) .main-header {
         gap: 5px;
     }
 
+    /* Mobile Header Adjustments */
+    .header-container {
+        padding: 0 20px;
+    }
+
+    /* Mobile Navigation Menu */
     .main-nav {
         display: none;
+        /* Hidden by default */
         position: absolute;
-        top: 80px;
+        top: 100%;
+        /* Below header */
         left: 0;
         width: 100%;
         background-color: var(--white);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
+        padding: 20px 0;
+        border-top: 1px solid #eee;
     }
 
     .main-nav.active {
         display: block;
+        /* Shown when toggled */
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .main-nav ul {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
+    .main-nav a {
+        font-size: 1.1rem;
+        padding: 10px;
+        display: block;
+    }
+
+    /* Toggle Button */
     .mobile-menu-toggle {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: var(--primary-green);
+        padding: 5px;
+    }
+
+    /* Hero Adjustments */
+    .hero-content {
+        padding: 0 20px;
+        margin-left: 0;
+        max-width: 100%;
+        text-align: center;
+        /* Center align on mobile */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        /* Smaller font on mobile */
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        /* Center paragraph */
+    }
+
+    .thumbnail-nav {
+        display: none;
+        /* Hide thumbnails on mobile to save space */
+    }
+
+    /* Tour Grid Adjustments */
+    .tours-grid {
+        grid-template-columns: 1fr;
+        /* Single column */
+        padding: 0 10px;
+    }
+
+    /* Footer Adjustments */
+    .footer-links-grid {
+        grid-template-columns: 1fr;
+        /* Single column footer */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-newsletter {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
     }
 }
