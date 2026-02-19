@@ -150,6 +150,17 @@ body:has(.hero-section) .main-header {
     left: 0;
 }
 
+/* Fix for Desktop Navigation on Hero */
+body:has(.hero-section) .main-nav a {
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body:has(.hero-section) .main-nav a:hover {
+    color: var(--accent-gold);
+    text-shadow: none;
+}
+
 /* Mobile: header is always white/solid */
 @media (max-width: 768px) {
     .main-header {
